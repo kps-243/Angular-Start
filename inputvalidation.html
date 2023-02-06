@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="inputValidation">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Input Validation</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./lib/angular.min.js"></script>
+    <script src="./controller/inputvalidation.js"></script>
+</head>
+
+<body ng-controller="validControl">
+    <form name="form" ng-submit="submitForm(form.$valid)" novalidate class="myform">
+        <div>
+            <p>
+                <label for="name">Full Name :</label>
+                <input type="text" id="name" ng-model="name" required>
+            </p>
+            <p>
+                <label for="email">Full Email :</label>
+                <input type="text" id="email" ng-model="email" required>
+            </p>
+            <p>
+                <button type="submit" ng-disable="form.$invalid">Submit</button>
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Module</title>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./controller/multicontroller.js"></script>
+</head>
+
+<body>
+    <!-- A ajt dans le compte rendu -->
+    <div ng-app="multiController">
+        <p>
+            <label for="valA"></label>
+            <input type="number" id="valA" ng-model="valA">
+        </p>
+        <p>
+            <label for="valB"></label>
+            <input type="number" id="valB" ng-model="valB">
+        </p>
+        <p ng-controller="Math1">
+            <button ng-click="add(valA,valB)">Additionner</button>
+            Result : {{ result }}
+        </p>
+        <p ng-controller="Math2">
+            <button ng-click="multiple(valA,valB)">Multiplier</button>
+            Result : {{ result }}
+        </p>
+    </div>
+</body>
+
+</html>

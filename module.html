@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="canvas">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./lib/angular.min.js"></script>
+    <script src="./controller/mymodule.js"></script>
+    <title>Demo Module</title>
+</head>
+
+<body>
+    <div ng-app="canvas"></div>
+    <div ng-controller="sayHello">
+        <label for="name">Your name :</label>
+        <input type="text" id="name" ng-model="name.text">
+        <p>{{ name.text }}, how are you ?</p>
+    </div>
+</body>
+
+</html>
