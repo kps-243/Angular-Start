@@ -10,19 +10,19 @@
     <script src="./controller/contactmodule.js"></script>
     <script language="JavaScript">
         function getContact() {
-            let myDiv = document.getElementById('myDiv');
-            let scope = angular.element(myDiv).scope();
-            let contact = scope.contact;
+            let myDiv = document.getElementById('myDiv'); // Selection de la balise div dans la variable myDiv
+            let scope = angular.element(myDiv).scope();// Relie myDiv avec le script AngularJS
+            let contact = scope.contact; // Stock la propriété contacte dans la variable contact
             scope.$apply();
-            alert("Read contact." + JSON.stringify(contact));
+            alert("Read contact." + JSON.stringify(contact)); // Créer une alerte qui va affichier la valeur de contact
         }
 
         function calculate() {
             let myDiv = document.getElementById('myDiv');
             let scope = angular.element(myDiv).scope();
-            let result = scope.calculate(2, 3);
+            let result = scope.calculate(2, 3); // Stock la fonction calculate dans la variable result avec les parametre 2 et 3.
             scope.$apply();
-            alert("call AngularJS controller function. Result: " + result);
+            alert("call AngularJS controller function. Result: " + result); // Alert qui affiche le resultat
         }
     </script>
 </head>
