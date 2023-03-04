@@ -3,8 +3,8 @@
 
 <head>
     <title>Simple Module</title>
-    <script src="lib/angular.min.js"></script>
-    <script src="controllers/simplebinding.js"></script>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./controller/simplebinding.js"></script>
 </head>
 
 <body ng-controller="MyControlller">
@@ -42,6 +42,22 @@
         <div>
             <label for="birthdate">Birth Date:</label>
             <input type="date" name="birthdate" id="birthdate" ng-model="customer.birthdate">
+        </div>
+        <div>
+            <label for="level">Skill level:</label>
+            <input type="range" name="level" id="level" min="1" max="100" alt="Level 1-100"
+                ng-model="customer.skilllevel">
+        </div>
+        <div>
+            <label for="agree"><input type="checkbox" id="agree" ng-model="customer.agree">
+                I agree to the terms & conditions</label>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+
+        <div>
+            Value: {{ customer }}
         </div>
     </form>
 </body>
