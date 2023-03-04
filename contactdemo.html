@@ -21,7 +21,7 @@
             let myDiv = document.getElementById('myDiv');
             let scope = angular.element(myDiv).scope();
             let result = scope.calculate(2, 3); // Stock la fonction calculate dans la variable result avec les parametre 2 et 3.
-            scope.$apply();
+            scope.$apply(); // Cela permet d'appliquer la fonction dans angularJS
             alert("call AngularJS controller function. Result: " + result); // Alert qui affiche le resultat
         }
     </script>
