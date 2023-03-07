@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="LogService">
+
+<head>
+    <title>Demo Log Service</title>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./controller/logservice.js"></script>
+</head>
+
+<body>
+    <h1>Demo Log Service</h1>
+    <br>
+    <div ng-controller="LogController">
+        <p>
+            <label for="message">Message:</label>
+            <input type="text" id="message" ng-model='message'>
+        </p>
+        <p>
+            <button ng-click="$log.log(message)">Log</button>
+            <button ng-click="$log.warn(message)">Warn</button>
+            <button ng-click="$log.info(message)">Info</button>
+            <button ng-click="$log.debug(message)">Debug</button>
+            <button ng-click="$log.error(message)">Error</button>
+        </p>
+    </div>
+</body>
+
+</html>
