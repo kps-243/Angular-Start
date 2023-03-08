@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="MyService">
+
+<head>
+    <title>Demo Custom Service</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./lib/angular.min.js"></script>
+    <script src="./controller/angularservice.js"></script>
+</head>
+
+<body ng-controller='MyControlller'>
+    <div>
+        <p>
+            <label for="val">Input number:</label>
+            <input type="number" id="val" ng-model='val'>
+        </p>
+        <p>
+            {{ result }}
+        </p>
+        <p>
+            <button ng-click="calculateSquare(val)">Calculate Square</button>
+            <button ng-click="calculateCircle(val)">Calculate Circle</button>
+        </p>
+    </div>
+</body>
+
+</html>
