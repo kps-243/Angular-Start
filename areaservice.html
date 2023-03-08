@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="MyService">
+<!-- déclare le module AngularJS nommé "MyService". -->
 
 <head>
     <title>Demo Custom Service</title>
@@ -8,18 +9,25 @@
     <script src="./controller/angularservice.js"></script>
 </head>
 
+
 <body ng-controller='MyControlller'>
+    <!-- attache le contrôleur AngularJS nommé "MyControlller" à la balise <body>. -->
     <div>
         <p>
             <label for="val">Input number:</label>
             <input type="number" id="val" ng-model='val'>
+            <!-- lie sa valeur à une propriété nommée "val" du $scope. -->
+
         </p>
         <p>
             {{ result }}
+            <!-- affiche la valeur de la propriété "result" du $scope -->
         </p>
         <p>
             <button ng-click="calculateSquare(val)">Calculate Square</button>
             <button ng-click="calculateCircle(val)">Calculate Circle</button>
+            <!-- pour déclencher les fonctions "calculateSquare" et "calculateCircle" du service AngularJS "AreaService", 
+                en passant la valeur de "val" en tant qu'argument. -->
         </p>
     </div>
 </body>
