@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Déclaration application AngularJS -->
 <html ng-app="SimpleBinding">
 
 <head>
@@ -7,15 +8,19 @@
     <script src="./controller/simplebinding.js"></script>
 </head>
 
+<!-- Appelle du controller -->
+
 <body ng-controller="MyControlller">
     <form>
         <div>
             <label for="name">Name: </label>
             <input type="text" id="name" ng-model="customer.name">
+            <!-- Directive "ng-model" qui lie la valeur de l'input à la propriété customer.name -->
         </div>
         <div>
             <label for="email">Email: </label>
             <input type="text" id="email" ng-model="customer.email">
+            <!-- Directive "ng-model" qui lie la valeur de l'input à la propriété customer.email -->
         </div>
         <div>
             <label for="selectcountry">Country:</label>
@@ -33,6 +38,7 @@
         <div>
             <label>Preference color:</label>
             <input type="radio" name="color" id="radio1" value="Red" ng-model="customer.color">
+            <!-- Directive "ng-model" qui lie la valeur de l'input à la propriété customer.color -->
             <label for="radio1">Red</label>
             <input type="radio" name="color" id="radio2" value="Green" ng-model="customer.color">
             <label for="radio2">Green</label>
@@ -42,14 +48,19 @@
         <div>
             <label for="birthdate">Birth Date:</label>
             <input type="date" name="birthdate" id="birthdate" ng-model="customer.birthdate">
+            <!-- Directive "ng-model" qui lie la valeur de l'input à la propriété customer.birthdate -->
         </div>
         <div>
             <label for="level">Skill level:</label>
             <input type="range" name="level" id="level" min="1" max="100" alt="Level 1-100"
                 ng-model="customer.skilllevel">
+            <!-- Directive "ng-model" qui lie la valeur de l'input à la propriété customer.skilllevel -->
+
         </div>
         <div>
             <label for="agree"><input type="checkbox" id="agree" ng-model="customer.agree">
+                <!-- Directive "ng-model" qui lie la valeur de l'input à la propriété customer.agree -->
+
                 I agree to the terms & conditions</label>
         </div>
         <div>
@@ -58,6 +69,7 @@
 
         <div>
             Value: {{ customer }}
+            <!-- Affiche l'objet customer en direct sur la page -->
         </div>
     </form>
 </body>
