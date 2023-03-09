@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- déclare l'application AngularJS -->
 <html ng-app="LogService">
 
 <head>
@@ -10,12 +11,18 @@
 <body>
     <h1>Demo Log Service</h1>
     <br>
+    <!-- Appelle du controller -->
     <div ng-controller="LogController">
         <p>
             <label for="message">Message:</label>
+            <!-- lie une variable de modèle AngularJS message à la balise input. -->
             <input type="text" id="message" ng-model='message'>
         </p>
         <p>
+            <!-- 
+                Appelle les fonctions de journalisation du service de journalisation $log 
+                avec le message entré dans le champ de texte.
+            -->
             <button ng-click="$log.log(message)">Log</button>
             <button ng-click="$log.warn(message)">Warn</button>
             <button ng-click="$log.info(message)">Info</button>
