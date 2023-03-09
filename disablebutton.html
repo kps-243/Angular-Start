@@ -13,9 +13,13 @@
 <body>
     <p>Demo disable button. Checked CheckBox to enable button</p>
     <br>
-    <p><input type="checkbox" ng-model="agree">I agree to the terms & conditions</p>
+    <p>
+        <input type="checkbox" ng-model="agree">I agree to the terms & conditions
+    </p>
+    <!-- Liaison de la variable agree avec la checkbox -->
     <p>
         <button type="submit" ng-disabled="!agree">Submit</button>
+        <!-- Si la checkbox n'est pas valide le bouton est inutilisable -->
     </p>
 </body>
 
