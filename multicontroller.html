@@ -22,10 +22,14 @@
             <input type="number" id="valB" ng-model="valB">
         </p>
         <p ng-controller="Math1">
+            <!-- Appelle du 1er contrôleur AngularJS nommé "Math1" à la balise <p>. -->
+
             <button ng-click="add(valA,valB)">Additionner</button>
             Result : {{ result }}
         </p>
         <p ng-controller="Math2">
+            <!-- Appelle du 2ème contrôleur AngularJS nommé "Math2" à la balise <p>. -->
+
             <button ng-click="multiple(valA,valB)">Multiplier</button>
             Result : {{ result }}
         </p>
