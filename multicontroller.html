@@ -16,21 +16,31 @@
         <p>
             <label for="valA"></label>
             <input type="number" id="valA" ng-model="valA">
+            <!-- Liaison de la variable valA avec la valeur entrée dans l'input. -->
+
         </p>
         <p>
             <label for="valB"></label>
             <input type="number" id="valB" ng-model="valB">
+            <!-- Liaison de la variable valB avec la valeur entrée dans l'input. -->
+
         </p>
         <p ng-controller="Math1">
             <!-- Appelle du 1er contrôleur AngularJS nommé "Math1" à la balise <p>. -->
 
             <button ng-click="add(valA,valB)">Additionner</button>
+            <!-- Au clique la fonction add() va s'executer -->
+
             Result : {{ result }}
+            <!-- Affichage du resultat grâce à la propriété result -->
+
+
         </p>
         <p ng-controller="Math2">
             <!-- Appelle du 2ème contrôleur AngularJS nommé "Math2" à la balise <p>. -->
 
             <button ng-click="multiple(valA,valB)">Multiplier</button>
+            <!-- Au clique la fonction multiple() va s'executer -->
             Result : {{ result }}
         </p>
     </div>
