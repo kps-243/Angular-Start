@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Déclaration application AngularJS nommé "RepeatBinding" -->
 <html ng-app="RepeatBinding">
 
 <head>
@@ -17,6 +18,8 @@
 <body ng-controller="MyControlller">
     <h2>Demo data binding with repeat data</h2>
     <br>
+    <!-- Cette balise est une directive "ng-repeat" d'AngularJS
+        permet de répéter le contenu pour chaque élément dans une liste du tableau "customers".  -->
     <div ng-repeat="customer in customers">
         <p class="item">{{customer.name}} | {{customer.email}} | {{customer.country}}</p>
     </div>
