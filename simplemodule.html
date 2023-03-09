@@ -12,22 +12,29 @@
     <!-- Appelle du contrôleur AngularJS nommé "MyControlller" à la balise <body>. -->
 
     <br>
+    <!-- Affichage du titre de la propriété title renseigner dans le fichier simplecontroller.js -->
     <h1>Demo {{ title }}</h1>
     <div>
         <p>
             <label for="valA">Valeur de A:</label>
             <input type="number" id="valA" ng-model='valA'>
+            <!-- Liaison de la variable valA avec la valeur entrée dans l'input. -->
         </p>
         <p>
             <label for="valB">Valeur de B:</label>
             <input type="number" id="valB" ng-model='valB'>
+            <!-- Liaison de la variable valA avec la valeur entrée dans l'input. -->
+
         </p>
         <p>
             Result: {{ result }}
+            <!-- Affiche du resultat grâce à la propriété result -->
         </p>
         <p>
             <button ng-click="add(valA,valB)">Additionner</button>
+            <!-- Au clique la fonction add() va s'executer -->
             <button ng-click="multiple(valA,valB)">Multiplier</button>
+            <!-- Au clique la fonction multiple() va s'executer -->
         </p>
     </div>
 </body>
