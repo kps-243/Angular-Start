@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Déclaration de l'application AngularJS -->
 <html ng-app="SimpleFilter">
 
 <head>
@@ -14,16 +15,19 @@
     </style>
 </head>
 
+<!-- Appelle du controller dans la balise body -->
+
 <body ng-controller="MyControlller">
     <h2>Demo filtering for repeated data</h2>
     <br>
+    <!-- Directive d'entrée de texte qui lie la valeur entrée à la variable "query" du $scope -->
     <p>
         <label for="filter">Filter:</label>
         <input type="text" id="filter" ng-model="query">
     </p>
+    <!-- Directive "ng-repeat" qui répète le contenu de la div pour chaque élément du tableau "customers",
+    en appliquant le filtre "query" pour filtrer les résultats affichés -->
     <div ng-repeat="customer in customers | filter:query">
         <p class="item">{{customer.name}} | {{customer.email}} | {{customer.country}}</p>
     </div>
 </body>
-
-</html>
