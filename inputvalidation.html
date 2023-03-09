@@ -12,21 +12,37 @@
     <script src="./controller/inputvalidation.js"></script>
 </head>
 
-<body ng-controller="validControl">
-    <!-- Appelle du contrôleur AngularJS nommé "validControl" à la balise <body>. -->
+<!-- Appelle du contrôleur AngularJS nommé "validControl" à la balise <body>. -->
 
+<body ng-controller="validControl">
+
+    <!-- 
+        Indique que la fonction du formulaire sera soumis 
+        la fonction submitform va s'executer avec comme argument form.$valid
+        novalidate désactiive la validation de base du formulaire.
+    -->
     <form name="form" ng-submit="submitform(form.$valid)" novalidate class="myform">
+
         <div>
             <p>
                 <label for="name">Full Name :</label>
                 <input type="text" id="name" ng-model="name" required>
+                <!-- 
+                    Liaision de la variable name avec valeur entrée dans le champs
+                    ce champs est obligatoire.
+                -->
             </p>
             <p>
                 <label for="email">Full Email :</label>
                 <input type="text" id="email" ng-model="email" required>
+                <!-- 
+                    Liaision de la variable email avec valeur entrée dans le champs
+                    ce champs est obligatoire.
+                -->
             </p>
             <p>
                 <button type="submit" ng-disable="form.$invalid">Submit</button>
+                <!-- Désactivation du formulaire si invalide -->
             </p>
         </div>
     </form>
